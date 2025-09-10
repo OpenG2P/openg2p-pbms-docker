@@ -15,6 +15,7 @@ ADD odoo.conf.tpl /etc/odoo
 
 ADD docker-build.sh /
 ADD docker-build.d /docker-build.d
+RUN chmod +x /docker-build.sh || true
 RUN /docker-build.sh
 RUN rm -rf /docker-build.sh /docker-build.d
 
