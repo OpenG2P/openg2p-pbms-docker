@@ -47,6 +47,7 @@ jobs:
           COMMIT_HASH=$(git --no-pager log -1 --pretty=format:'%H')
 
           cd utils
+          chmod +x package.sh || true
           ./package.sh ../${package}
           docker build . \
             --build-arg BASE_VERSION=${ODOO_BASE_VERSION} \
