@@ -1,4 +1,4 @@
-name: OpenG2P PBMS Dockers
+name: OpenG2P PBMS Background Task Dockers
 
 on:
   workflow_dispatch: {}
