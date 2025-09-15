@@ -1,5 +1,5 @@
 # bg-task-api.txt
-#!tahzeer/openg2p-pbms-bg-task-api:zambi-cfw
+#!tahzeer/openg2p-pbms-bg-task-api:zambia-cfw
 #!openg2p-pbms-bg-tasks/Dockerfile.api
 #!.
 git+https://github.com/tahzeer/openg2p-pbms-gen2-bg-tasks-registry-addons@zambia-cfw#subdirectory=openg2p-bg-task-registry-adapters
