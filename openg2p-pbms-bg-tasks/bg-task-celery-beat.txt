@@ -1,4 +1,4 @@
 # g2p-bridge-celery-beat.txt
-#!tahzeer/openg2p-pbms-bg-task-celery-beat-producers:zambia-cfw
+#!openg2p/openg2p-pbms-bg-task-celery-beat-producers:3.0.0
 #!openg2p-pbms-bg-tasks/Dockerfile.producers
 #!.
