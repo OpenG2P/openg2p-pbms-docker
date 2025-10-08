@@ -19,9 +19,9 @@ RUN pip install --no-cache-dir git+https://github.com/openg2p/openg2p-fastapi-co
 
 # Always from openg2p-g2p-bridge repo (no local installs)
 RUN pip install --no-cache-dir \
-    "git+https://github.com/openg2p/openg2p-pbms-gen2-bg-tasks@${G2P_REF}#subdirectory=openg2p-pbms-models" \
-    "git+https://github.com/openg2p/openg2p-pbms-gen2-bg-tasks@${G2P_REF}#subdirectory=openg2p-bg-task-models" \
-    "git+https://github.com/openg2p/openg2p-pbms-gen2-bg-tasks@${G2P_REF}#subdirectory=openg2p-bg-task-api"
+    "git+https://github.com/openg2p/openg2p-pbms-bg-tasks@${G2P_REF}#subdirectory=openg2p-pbms-models" \
+    "git+https://github.com/openg2p/openg2p-pbms-bg-tasks@${G2P_REF}#subdirectory=openg2p-bg-task-models" \
+    "git+https://github.com/openg2p/openg2p-pbms-bg-tasks@${G2P_REF}#subdirectory=openg2p-bg-task-api"
 
 RUN apk del --no-network .build-deps
 
