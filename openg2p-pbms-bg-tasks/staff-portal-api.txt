@@ -1,5 +1,5 @@
-# bg-task-api.txt
-#!tahzeer/openg2p-pbms-bg-task-api:3.0.0
+# staff-portal-api.txt
+#!tahzeer/openg2p-pbms-staff-portal-api:3.0.0
 #!openg2p-pbms-bg-tasks/Dockerfile.api
 #!.
 git+https://github.com/tahzeer/openg2p-pbms-bg-tasks-extensions@3.0#subdirectory=openg2p-bg-task-registry-adapters
