@@ -1,6 +1,6 @@
 FROM python:3.12.11-alpine3.22
 
-ARG G2P_REF=v3.0.0
+ARG G2P_REF=3.0
 
 RUN apk add --no-cache --virtual .build-deps gcc libc-dev linux-headers make \
  && apk add --no-cache bash git gettext libpq-dev libmagic
@@ -19,9 +19,9 @@ RUN pip install --no-cache-dir git+https://github.com/openg2p/openg2p-fastapi-co
 
 # Always from openg2p-g2p-bridge repo (no local installs)
 RUN pip install --no-cache-dir \
-    "git+https://github.com/openg2p/openg2p-pbms-bg-tasks@${G2P_REF}#subdirectory=openg2p-pbms-models" \
-    "git+https://github.com/openg2p/openg2p-pbms-bg-tasks@${G2P_REF}#subdirectory=openg2p-bg-task-models" \
-    "git+https://github.com/openg2p/openg2p-pbms-api@${G2P_REF}#subdirectory=openg2p-pbms-staff-portal-api"
+    "git+https://github.com/tahzeer/openg2p-pbms-bg-tasks@${G2P_REF}#subdirectory=openg2p-pbms-models" \
+    "git+https://github.com/tahzeer/openg2p-pbms-bg-tasks@${G2P_REF}#subdirectory=openg2p-bg-task-models" \
+    "git+https://github.com/tahzeer/openg2p-pbms-api@${G2P_REF}#subdirectory=openg2p-pbms-staff-portal-api"
 
 RUN apk del --no-network .build-deps
 
