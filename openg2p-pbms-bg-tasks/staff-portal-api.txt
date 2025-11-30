@@ -1,0 +1,5 @@
+# staff-portal-api.txt
+#!openg2p/openg2p-pbms-staff-portal-api:zambia-cfw
+#!openg2p-pbms-bg-tasks/Dockerfile.api
+#!.
+git+https://github.com/openg2p/openg2p-pbms-bg-tasks-extensions@zambia-cfw#subdirectory=openg2p-bg-task-registry-adapters
