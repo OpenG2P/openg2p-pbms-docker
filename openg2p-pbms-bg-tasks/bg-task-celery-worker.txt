@@ -1,5 +1,5 @@
 # bg-task-celery-worker.txt
-#!openg2p/openg2p-pbms-bg-task-celery-workers:3.0.0
+#!openg2p/openg2p-pbms-bg-task-celery-workers:3.0.0-develop
 #!openg2p-pbms-bg-tasks/Dockerfile.workers
 #!.
 # adapters/dependencies (adjust refs/branches/tags as needed)
