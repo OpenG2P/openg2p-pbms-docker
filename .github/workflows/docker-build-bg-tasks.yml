@@ -10,6 +10,7 @@ jobs:
       fail-fast: false
       matrix:
         serviceFile:
+          - openg2p-pbms-bg-tasks/bene-portal-api.txt
           - openg2p-pbms-bg-tasks/staff-portal-api.txt
           - openg2p-pbms-bg-tasks/bg-task-celery-worker.txt
           - openg2p-pbms-bg-tasks/bg-task-celery-beat.txt
