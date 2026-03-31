@@ -1,4 +1,4 @@
-#!openg2p/openg2p-pbms-core:3.0.0-develop
+#!psnappz/openg2p-pbms-core:3.0.0-develop
 #!17.0-20250807
 
 # OCA dependencies
