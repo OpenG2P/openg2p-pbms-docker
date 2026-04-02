@@ -7,6 +7,7 @@ apt-get install -y --no-install-recommends \
   libtool \
   gettext \
   libjpeg-dev \
+  git \
   zlib1g-dev
 for dir in $EXTRA_ADDONS_DIR/*/; do
   if [[ -f ${dir}requirements.txt ]]; then
