@@ -50,12 +50,15 @@ jobs:
       - name: Read service file and prepare adapters requirements
         id: read
         shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.OPENG2P_BOT_GITHUB_PAT }}
         run: |
           set -euo pipefail
           file="${{ matrix.serviceFile }}"
           [ -f "$file" ] || { echo "Service file not found: $file" >&2; exit 1; }
 
           # Collect non-empty, non-comment lines; strip leading '#!' if present
+          # Also expand env vars (e.g. ${OPENG2P_BOT_GITHUB_PAT}) in each line
           mapfile -t LINES < <(awk '
             {
               s=$0
@@ -63,7 +66,7 @@ jobs:
               if (s ~ /^[[:space:]]*#/) next   # skip comment-only lines like "# header"
               if (s ~ /^[[:space:]]*$/) next   # skip blank
               print s
-            }' "$file")
+            }' "$file" | envsubst)
 
           if [ "${#LINES[@]}" -lt 2 ]; then
             echo "Invalid file format: need at least IMAGE_ID and DOCKERFILE lines" >&2
