@@ -123,6 +123,8 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: ${{ steps.read.outputs.image }}
+          build-args: |
+            OPENG2P_BOT_GITHUB_PAT=${{ secrets.OPENG2P_BOT_GITHUB_PAT }}
           labels: |
             org.opencontainers.image.created=${{ steps.read.outputs.created }}
             org.opencontainers.image.authors=${{ github.repository_owner }}
