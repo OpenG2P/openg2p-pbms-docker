@@ -2,4 +2,4 @@
 #!openg2p/openg2p-zambia-cfw-pbms-staff-portal-api:3.0.1
 #!openg2p-pbms-bg-tasks/Dockerfile.api
 #!.
-git+https://github.com/openg2p/openg2p-zambia-cfw-pbms-bg-tasks-extensions@v3.0.1#subdirectory=openg2p-bg-task-registry-adapters
+git+https://${OPENG2P_BOT_GITHUB_PAT}@github.com/openg2p/openg2p-zambia-cfw-pbms-bg-tasks-extensions@v3.0.1#subdirectory=openg2p-bg-task-registry-adapters
