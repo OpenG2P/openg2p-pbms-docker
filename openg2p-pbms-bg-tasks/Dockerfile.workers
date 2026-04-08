@@ -23,7 +23,7 @@ RUN pip install --upgrade pip setuptools && \
         git+https://github.com/openg2p/openg2p-g2p-bridge@2.0#subdirectory=openg2p-g2p-bridge-models \
         "git+https://github.com/openg2p/openg2p-pbms-bg-tasks@${G2P_REF}#subdirectory=openg2p-pbms-models" \
         "git+https://github.com/openg2p/openg2p-pbms-bg-tasks@${G2P_REF}#subdirectory=openg2p-bg-task-models" \
-        "git+https://github.com/psnappz/openg2p-pbms-bg-tasks@${G2P_REF}#subdirectory=openg2p-bg-task-celery-workers"
+        "git+https://github.com/psnappz/openg2p-pbms-gen2-bg-tasks@${G2P_REF}#subdirectory=openg2p-bg-task-celery-workers"
 
 RUN apk del --no-network .build-deps
 
