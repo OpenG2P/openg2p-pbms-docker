@@ -1,10 +1,10 @@
-name: Build & Push PBMS Background Task Dockers
+name: Build & Push PBMS API Dockers
 
 on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Version to build for all BG Task services, for example 3.0.0 or v3.0.0"
+        description: "Version to build for all API services, for example 3.0.0 or v3.0.0"
         required: true
         type: string
 
@@ -27,14 +27,9 @@ jobs:
           matrix = {
               "include": [
                   {
-                      "name": "bg-task-celery-worker",
-                      "serviceFile": f"openg2p-pbms-bg-tasks/bg-task-celery-worker/{version}.txt",
-                      "dockerfile": "openg2p-pbms-bg-tasks/Dockerfile.workers",
-                  },
-                  {
-                      "name": "bg-task-celery-beat",
-                      "serviceFile": f"openg2p-pbms-bg-tasks/bg-task-celery-beat/{version}.txt",
-                      "dockerfile": "openg2p-pbms-bg-tasks/Dockerfile.producers",
+                      "name": "staff-portal-api",
+                      "serviceFile": f"openg2p-pbms-apis/staff-portal-api/{version}.txt",
+                      "dockerfile": "openg2p-pbms-apis/Dockerfile.api",
                   },
               ]
           }
@@ -175,5 +170,5 @@ jobs:
             org.opencontainers.image.revision=${{ steps.read.outputs.commit }}
             org.opencontainers.image.vendor=${{ steps.read.outputs.vendor }}
             org.opencontainers.image.title=${{ steps.read.outputs.title }}
-            org.opencontainers.image.description=OpenG2P PBMS FastAPI service image
+            org.opencontainers.image.description=OpenG2P PBMS API service image
             org.openg2p.service.name=${{ matrix.name }}
