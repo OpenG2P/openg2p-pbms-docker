@@ -1,12 +1,11 @@
-name: OpenG2P PBMS Odoo Dockers
+name: Build & Push PBMS Odoo Dockers
 
 on:
   workflow_dispatch:
     inputs:
-      packagePath:
-        description: 'Package path w.r.t openg2p-pbms-odoo folder'
+      version:
+        description: "Version to build, for example 3.0.0"
         required: true
-        default: ''
         type: string
 
 jobs:
@@ -25,7 +24,7 @@ jobs:
         run: |
           cd openg2p-pbms-odoo
 
-          package=${{ inputs.packagePath }}
+          package=${{ inputs.version }}.txt
 
           if [ ! -f ${package} ]; then
             echo "Could not find the package specified." 1>&2;
