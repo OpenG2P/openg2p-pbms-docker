@@ -29,12 +29,12 @@ jobs:
                   {
                       "name": "bg-task-celery-worker",
                       "serviceFile": f"openg2p-pbms-bg-tasks/bg-task-celery-worker/{version}.txt",
-                      "dockerfile": "openg2p-pbms-bg-tasks/Dockerfile.workers",
+                      "dockerfile": "openg2p-pbms-bg-tasks/bg-task-celery-worker/Dockerfile",
                   },
                   {
                       "name": "bg-task-celery-beat",
                       "serviceFile": f"openg2p-pbms-bg-tasks/bg-task-celery-beat/{version}.txt",
-                      "dockerfile": "openg2p-pbms-bg-tasks/Dockerfile.producers",
+                      "dockerfile": "openg2p-pbms-bg-tasks/bg-task-celery-beat/Dockerfile",
                   },
               ]
           }

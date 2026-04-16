@@ -29,7 +29,7 @@ jobs:
                   {
                       "name": "staff-portal-api",
                       "serviceFile": f"openg2p-pbms-apis/staff-portal-api/{version}.txt",
-                      "dockerfile": "openg2p-pbms-apis/Dockerfile.api",
+                      "dockerfile": "openg2p-pbms-apis/staff-portal-api/Dockerfile",
                   },
               ]
           }
