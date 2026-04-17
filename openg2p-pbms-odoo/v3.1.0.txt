@@ -1,4 +1,4 @@
-#!openg2p/openg2p-pbms-core:3.0.1
+#!openg2p/openg2p-pbms-core:3.1.0
 #!17.0-20250807
 
 # OCA dependencies
