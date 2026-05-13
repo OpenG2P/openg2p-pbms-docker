@@ -1,0 +1,4 @@
+# bg-task-celery-beat.txt
+#!openg2p/openg2p-pbms-bg-task-celery-beat-producers:dci-workshop
+#!openg2p-pbms-bg-tasks/bg-task-celery-beat/Dockerfile
+#!.
